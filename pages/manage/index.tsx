@@ -18,6 +18,11 @@ interface cPanelProps {
   activePanelNo: number;
   handleExpand(no: number): any;
 }
+
+interface socialProps{
+  icon : string
+}
+
 const Field: FC<fieldProps> = ({ title, value }) => {
   return (
     <span className={styles.field}>
@@ -26,6 +31,18 @@ const Field: FC<fieldProps> = ({ title, value }) => {
     </span>
   );
 };
+
+const Social: FC<socialProps> = ({icon}) => {
+  return (
+    <span className={styles.link}>
+      <img src={icon} alt="" />
+      <span className={styles.input}>
+        <input type="text" />
+        <span className={styles.customBorder} />
+      </span>
+    </span>
+  )
+}
 
 const CPanel: FC<cPanelProps> = ({
   title,
@@ -160,12 +177,7 @@ const Home: FC = () => {
                   </p>
                 </span>
               </CPanel>
-              <CPanel
-                title={"Step 3 - Finalize or Cancel"}
-                activePanelNo={ActivePanelNo}
-                panelNo={3}
-                handleExpand={handleExpand}
-              >
+              <CPanel title={"Step 3 - Finalize or Cancel"} activePanelNo={ActivePanelNo} panelNo={3} handleExpand={handleExpand} >
                 <span className={styles.finalize}>
                   <p className={styles.value}>
                     Your tokens have been deposited click finalize to confirm
@@ -175,23 +187,38 @@ const Home: FC = () => {
                   <h5>Cancel</h5>
                 </span>
               </CPanel>
-              <CPanel
-                title={"Optional - Update Presale Information"}
-                activePanelNo={ActivePanelNo}
-                panelNo={4}
-                handleExpand={handleExpand}
-              >
+              <CPanel title={"Optional - Update Presale Information"} activePanelNo={ActivePanelNo} panelNo={4} handleExpand={handleExpand}>
                 <span className={styles.optional}>
-                  <span className={styles.row}>
-                    <span className={styles.input}>
-                      <span>
-                        <p className={styles.inputTitle}>Upload a Logo</p>
-                        <input type="text" />
-                        <span className={styles.customBorder} />
-                      </span>
-                    </span>
-                    <img src={assets.bnbIcon} alt="" />
+                  <span className={styles.input}>
+                    <p className={styles.inputTitle}>Upload a Logo</p>
+                    <input type="text" placeholder={"www.binance.com/sale/coin"} />
+                    <span className={styles.customBorder} />
                   </span>
+                  <span className={styles.logoLarge}><img src={assets.bnbIcon} alt="" /></span>
+                </span>
+                {/* Presale information */}
+                <span className={styles.optional}>
+                  <span className={styles.inputOptional}>
+                    <p className={styles.inputTitle}>Presale Information</p>
+                    <textarea placeholder={"Enter Information regarding the Presale Information"} />
+                    <span className={styles.customBorder} />
+                  </span>
+                </span>
+                {/* Social Links*/}
+                <span className={styles.optional}>
+                  <span className={styles.socialOptional}>
+                  <div className={styles.row}>
+                     <Social icon={assets.facebook}/>
+                     <Social icon={assets.twitter}/>
+                    </div>
+                    <div className={styles.row}>
+                     <Social icon={assets.instagram}/>
+                     <Social icon={assets.telegram}/>
+                    </div>
+                  </span>
+                </span>
+                <span className={styles.save}>
+                  <button className={styles.btn}>Save</button>
                 </span>
               </CPanel>
             </div>

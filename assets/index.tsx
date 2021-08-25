@@ -18,7 +18,10 @@ const navIcon1N: string = './navIcon1N.png'
 const navIcon2N: string = './navIcon2N.png'
 const navIcon3N: string = './navIcon3N.png'
 const arrowDown: string = './arrowDown.png'
+const facebook:string= './facebook.png'
+const twitter:string= './twitter.png'
+const instagram:string= './instagram.png'
+const telegram:string= './telegram.png'
 
 
-
-export default { logo, bnbIcon, loading, success, failed, help, close, nextIcon, prevIcon, lightMode, darkMode, instruction, disclaimer, navIcon1, navIcon2, navIcon3, navIcon1N, navIcon2N, navIcon3N, arrowDown }
+export default { logo, bnbIcon, loading, success, failed, help, close, nextIcon, prevIcon, lightMode, darkMode, instruction, disclaimer, navIcon1, navIcon2, navIcon3, navIcon1N, navIcon2N, navIcon3N, arrowDown ,facebook,instagram,telegram,twitter}

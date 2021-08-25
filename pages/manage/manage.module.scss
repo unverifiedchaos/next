@@ -217,17 +217,18 @@
   @extend .depositToken;
   padding: 1.5rem 0;
   width: 100%;
+  display: flex;
+  border-bottom: 3px solid var(--bg-nav);
 
-  .row{
-      width: 100%;
+  .logoLarge{
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: 1rem;
   }
-  
+
   img{
-      height: 3.5rem;
-      margin-left: auto;
-      margin-right: 1rem;
-      position: relative;
-      right: 0;
+      height: 4.5rem;
       background-color: white;
       border-radius: 100%;
       border: 4.5px solid var(--border-color);
@@ -235,11 +236,11 @@
   }
 }
 
+
 .input {
     display: flex;
     flex-direction: column;
     width: 40rem;
-    margin-top: auto;
     
   input {
     border: none;
@@ -262,6 +263,7 @@
     }
   }
 
+  
   .customBorder{
     display: flex;
     width: 100%;
@@ -280,14 +282,86 @@
   }
 }
 
+.inputOptional{
+  @extend .input;
+  width: 80%;
+  height: max-content;
+  textarea{
+    border: none;
+    outline: none;
+    font-family: $font;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1.2rem;
+    color: var(--highlight-text-color);
+    margin: 0 1rem;
+    background-color: var(--bg-nav);
+    border-radius: 15px;
+    border-bottom-left-radius :0;
+    border-bottom-right-radius :0;
+    padding: 0.5rem 1rem;
+  }
+
+}
+
 .inputTitle{
     font-size: 1.25rem;
     margin: 0;
     font-family: $font;
     color: var(--highlight-text-color);
     font-weight: 500;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     margin-left: 1rem !important;
+    
+}
+
+.preSaleInfo{
+  @extend .optional;
+}
+
+.socialOptional{
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  margin: 0.5rem 0;
+  div{
+    margin: 0.5rem 0;
+  }
+
+  .row{
+    gap: 5rem;
+  }
+
+  .link{
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+ 
+  img{
+    height: 3.5rem;
+    width: 3.5rem;
+    border: 0;
+    padding: 0;
+    background-color: rgba(128, 128, 128, 0);
+    margin: 0 1.5rem;
+    margin-right: 0.75rem;
+  }
+  .input{
+    width: 20rem;
+  }
+  }
+}
+
+.save{
+  display: flex;
+  width: 100%;
+
+  .btn{
+    width: 7rem;
+    margin: 1rem 1rem;
+    margin-left: auto;
+    
+  }
 }
 
 @keyframes liquid {
