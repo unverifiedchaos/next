@@ -19,8 +19,8 @@ interface cPanelProps {
   handleExpand(no: number): any;
 }
 
-interface socialProps{
-  icon : string
+interface socialProps {
+  icon: string
 }
 
 const Field: FC<fieldProps> = ({ title, value }) => {
@@ -32,12 +32,12 @@ const Field: FC<fieldProps> = ({ title, value }) => {
   );
 };
 
-const Social: FC<socialProps> = ({icon}) => {
+const Social: FC<socialProps> = ({ icon }) => {
   return (
     <span className={styles.link}>
       <img src={icon} alt="" />
       <span className={styles.input}>
-        <input type="text" />
+        <input type="text" placeholder="Search Tokens" />
         <span className={styles.customBorder} />
       </span>
     </span>
@@ -207,13 +207,13 @@ const Home: FC = () => {
                 {/* Social Links*/}
                 <span className={styles.optional}>
                   <span className={styles.socialOptional}>
-                  <div className={styles.row}>
-                     <Social icon={assets.facebook}/>
-                     <Social icon={assets.twitter}/>
+                    <div className={styles.row}>
+                      <Social icon={assets.facebook} />
+                      <Social icon={assets.twitter} />
                     </div>
                     <div className={styles.row}>
-                     <Social icon={assets.instagram}/>
-                     <Social icon={assets.telegram}/>
+                      <Social icon={assets.instagram} />
+                      <Social icon={assets.telegram} />
                     </div>
                   </span>
                 </span>

@@ -19,13 +19,20 @@ const lightModeStyles: object = {
     '--bg-manage-header': '#99EFDA',
     '--bg-manage-panel': 'white',
     '--bw-text': 'black',
-    '--btn-border':'#00E3AD'
+    '--btn-border': '#00E3AD',
+    '--bg-panel-grey': '#F9F9F9',
+    '--bw-light': 'white',
+    '--prog-primary':'#B6EDE0',
+    '--prog-primary-dark':'#008162',
+    '--prog-sec':'#EDEDED',
+    '--card-btn':'#B6EDE0'
 }
 
 const darkModeStyles: object = {
     '--bg-gradient': 'linear-gradient(180deg, #323B5C 0%, #3C2A54 99.98%)',
     '--bg-panel': '#22272E',
     '--highlight-text-color': 'white',
+    '--highlight-text-color-light': 'White',
     '--text-color': 'white',
     '--border-color': 'grey',
     '--border-color-hover': '#A05CFE',
@@ -41,7 +48,13 @@ const darkModeStyles: object = {
     '--bg-manage-header': 'black',
     '--bg-manage-panel': '#1B1A1E',
     '--bw-text': 'white',
-    '--btn-border' :'#A05CFE'              
+    '--btn-border': '#A05CFE',
+    '--bg-panel-grey': '#22272E',
+    '--bw-light': 'black',
+    '--prog-primary':'#8B6CB9',
+    '--prog-primary-dark':'#8B6CB9',
+    '--prog-sec':'#110A1D',
+    '--card-btn':'#000000'
 }
 
 
