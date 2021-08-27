@@ -4,7 +4,6 @@ import Nav from "@/components/Nav";
 import SideNav from "@/components/SideNav";
 import styles from "./manage.module.scss";
 import assets from "@/assets";
-import ConnectWallet from '@/components/ConnectWallet'
 
 const routes: string[] = [];
 
@@ -83,17 +82,21 @@ const Home: FC = () => {
   };
 
   const [inFocus, setInFocus] = useState<boolean>(false);
-  const [isWalletVisible, setIsWalletVisible] = useState<boolean>(false);
+
   const handleFocus = () => {
     setInFocus((f) => !f);
   };
 
   return (
     <>
-       <Nav routes={routes} activeRoute={routes[0]} darkMode={darkMode} setDarkMode={setDarkMode} setIsWalletVisible={setIsWalletVisible} />
+      <Nav
+        routes={routes}
+        activeRoute={routes[0]}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+      />
       <div>
         <Content>
-        {isWalletVisible&&<ConnectWallet/>}
           <SideNav darkMode={darkMode}></SideNav>
           <div className={styles.manage}>
             <span className={styles.header}>
