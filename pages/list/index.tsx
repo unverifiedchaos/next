@@ -4,6 +4,7 @@ import Nav from '@/components/Nav';
 import SideNav from '@/components/SideNav';
 import styles from "./list.module.scss";
 import assets from '@/assets';
+import ConnectWallet from '@/components/ConnectWallet'
 
 
 const routes: string[] = [];
@@ -61,11 +62,13 @@ const Card: FC = () => {
 
 const Home: FC = () => {
     const [darkMode, setDarkMode] = useState<boolean>(!false);
+    const [isWalletVisible, setIsWalletVisible] = useState<boolean>(false);
     return (
         <>
-            <Nav routes={routes} activeRoute={routes[0]} darkMode={darkMode} setDarkMode={setDarkMode} />
+            <Nav routes={routes} activeRoute={routes[0]} darkMode={darkMode} setDarkMode={setDarkMode} setIsWalletVisible={setIsWalletVisible} />
             <div>
                 <Content>
+                {isWalletVisible ? <ConnectWallet/> : null}
                     <SideNav darkMode={darkMode}></SideNav>
                     <div className={styles.list}>
                         <div className={styles.listHeader}>

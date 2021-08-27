@@ -11,8 +11,8 @@ interface Props {
 }
 const theme = createTheme({
     palette: {
-        primary: { main: '#08C2D4' },
-        secondary: { main: '#000000' }
+        primary: { main: '#99EFDA' },
+        secondary: { main: '#008A64' }
     },
 });
 

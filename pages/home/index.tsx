@@ -25,7 +25,7 @@ const Home: FC = () => {
                 <Content>
                     <SideNav darkMode={darkMode}></SideNav>
                     {isWalletVisible ? <ConnectWallet/> : null}
-                    <PopUp></PopUp>
+                    <PopUp/>
                     <section className={styles.panelOne}>
                         <PanelFullWidth>
                             <InputBox />
