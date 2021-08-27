@@ -6,6 +6,7 @@ import InputBox from '@/components/InputBox';
 import styles from './home.module.scss'
 import IconChip from '@/components/IconChip';
 import IconChipInput from '@/components/IconChipInput';
+import IconChipInputTime from '@/components/IconChipInputTime';
 import PopUp from '@/components/PopUp';
 import Nav from '@/components/Nav';
 import SideNav from '@/components/SideNav';
@@ -53,8 +54,9 @@ const Home: FC = () => {
                             <IconChipInput title={"Max Contribution"} value={"1200"} />
                         </PanelVerticle>
                         <PanelVerticle>
-                            <IconChipInput title={"Start at"} value={"1200"} />
-                            <IconChipInput title={"End at"} value={"1200"} />
+                            
+                            <IconChipInputTime title={"Start at"} value={"1200"} />
+                            <IconChipInputTime title={"End at"} value={"1200"} />
                         </PanelVerticle>
                     </section>
 

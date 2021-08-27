@@ -4,7 +4,7 @@ import Nav from '@/components/Nav';
 import SideNav from '@/components/SideNav';
 import styles from "./list.module.scss";
 import assets from '@/assets';
-import { auto, left } from '@popperjs/core';
+
 
 const routes: string[] = [];
 
