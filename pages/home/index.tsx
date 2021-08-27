@@ -10,19 +10,22 @@ import IconChipInputTime from '@/components/IconChipInputTime';
 import PopUp from '@/components/PopUp';
 import Nav from '@/components/Nav';
 import SideNav from '@/components/SideNav';
+import ConnectWallet from '@/components/ConnectWallet'
 
 const routes: string[] = [];
 
 const Home: FC = () => {
     const [darkMode, setDarkMode] = useState<boolean>(!false);
+    const [isWalletVisible, setIsWalletVisible] = useState<boolean>(false);
     return (
         <>
-            <Nav routes={routes} activeRoute={routes[0]} darkMode={darkMode} setDarkMode={setDarkMode} />
+            <Nav routes={routes} activeRoute={routes[0]} darkMode={darkMode} setDarkMode={setDarkMode} setIsWalletVisible={setIsWalletVisible} />
+           
             <div>
                 <Content>
                     <SideNav darkMode={darkMode}></SideNav>
+                    {isWalletVisible ? <ConnectWallet/> : null}
                     <PopUp></PopUp>
-
                     <section className={styles.panelOne}>
                         <PanelFullWidth>
                             <InputBox />

@@ -1,0 +1,43 @@
+import { useState } from "react";
+import { FC } from "react";
+import assets from "../../assets";
+import styles from './connectWallet.module.scss'
+
+const PopUp: FC = () => {
+
+    return (
+        <div className={styles.popUpContainer}>
+            <div className={styles.popUp}>
+                <div className={styles.walletCon}>
+                    <span className={styles.header}>
+                        <p>Connect to Wallet</p>
+                    </span>
+                    <span className={styles.body}>
+                        <div className={styles.row} style={{ marginBottom: "1.5rem" }}>
+                            <span className={styles.iconCon}>
+                                <img className={styles.icon} src={assets.w1} alt="" />
+                                <p>Metamask</p>
+                            </span>
+                            <span className={styles.iconCon}>
+                                <img className={styles.icon} src={assets.w4} alt="" />
+                                <p>Wallet Connect</p> 
+                            </span>
+                        </div>
+                        <div className={styles.row}>
+                            <span className={styles.iconCon}>
+                                <img className={styles.icon} src={assets.w2} alt="" />
+                                <p>Trust Wallet</p>
+                            </span>
+                            <span className={styles.iconCon}>
+                                <img className={styles.icon} src={assets.w3} alt="" />
+                                <p>More</p>
+                            </span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default PopUp;

@@ -345,16 +345,16 @@
     background-color: var(--bg-manage-panel);
     width: auto;
     margin: 0.5rem 1rem;
-    border-radius: 15px;
+    border-radius: 8px;
     height: 8rem;
-    border:1px solid grey;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 
     h3{
         font-size: 1rem;
         font-family: $font;
         color: crimson;
         margin: 0;
-        margin-left: 1rem;
+        margin-left: 0.5rem;
         margin-top: 0.5rem;
     }
 
@@ -362,6 +362,6 @@
         font-family: $font;
         font-size: 0.7rem;
         color: var(--bw-text);
-        margin: 0.5rem 1rem;
+        margin: 0.5rem 0.5rem;
     }
 }

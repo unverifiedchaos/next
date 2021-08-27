@@ -3,14 +3,16 @@ import { FC } from 'react';
 import styles from './nav.module.scss'
 import assets from '../../assets'
 import darkModeUtility from './../../utility/darkMode.utility'
+
 interface Props {
     routes: string[],
     activeRoute: string,
     darkMode: boolean,
-    setDarkMode: any
+    setDarkMode: any,
+    setIsWalletVisible:any
 }
 
-const Nav: FC<Props> = ({ activeRoute, routes, setDarkMode, darkMode }) => {
+const Nav: FC<Props> = ({ activeRoute, routes, setDarkMode, darkMode,setIsWalletVisible }) => {
 
 
 
@@ -41,7 +43,7 @@ const Nav: FC<Props> = ({ activeRoute, routes, setDarkMode, darkMode }) => {
                     })
                 }
             </ul>
-            <button className={styles.walletBtn}>Connect to wallet</button>
+            <button className={styles.walletBtn} onClick={()=>{setIsWalletVisible((s:any)=>{return !s})}}>Connect to wallet</button>
             <span className={styles.darkModeIcon} onClick={handleDarkMode}>
                 {darkMode ?
                     <img src={assets.darkMode} /> :

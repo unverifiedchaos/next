@@ -2,14 +2,19 @@ import { FC, useState } from 'react';
 import assets from '../../assets';
 import styles from './iconChipInput.module.scss'
 import { DateTimePicker, MuiPickersUtilsProvider, } from '@material-ui/pickers';
-import {MuiThemeProvider, createTheme,} from '@material-ui/core'
+import { MuiThemeProvider, createTheme, } from '@material-ui/core'
 import DateFnsUtils from '@date-io/date-fns';
 interface Props {
     icon?: string,
     title: string,
     value: string,
 }
-const theme = createTheme({ palette: { primary: { main: '#08C2D4' }, secondary: { main: '#000000' } } });
+const theme = createTheme({
+    palette: {
+        primary: { main: '#08C2D4' },
+        secondary: { main: '#000000' }
+    },
+});
 
 const IconChipInput: FC<Props> = ({ title, value, icon }) => {
 
@@ -21,9 +26,8 @@ const IconChipInput: FC<Props> = ({ title, value, icon }) => {
 
 
 
-
     return (
-        <MuiThemeProvider theme={theme}>
+        <MuiThemeProvider theme={theme} >
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
                 <span className={styles.iconChip}>
                     <span className={styles.iconContainer}>
